@@ -1,0 +1,139 @@
+
+
+.company{
+	display:inline-flex; }
+	.navigation{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		background-color: #eee;
+	}
+	.navigation{
+		float: right;
+	}
+	.navigation{
+
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	.company{
+		bottom: solid:border;
+	}
+.b{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  
+}
+
+
+	.display{
+		text-align: center !important;
+	}
+	.paragragh{
+		text-align: center !important;
+	}
+	.free1 {
+		text-align: center !important;
+	}
+
+	.box1-body {
+		text-align: center !important;
+	}
+	.pro1{
+		text-align: center !important;
+	}
+	.box2-body {
+		text-align: center !important;
+	}
+	.enterprise1{
+		text-align: center !important;
+	}
+	.box3-body {
+		text-align: center !important;
+	}
+
+	.footer1{
+		text-align: center !important;
+	}
+	.container{
+		display:inline-flex; }
+
+		.box1 {border-style: solid;
+
+			border-radius: 8px;
+			border: 1px solid black;
+			margin-top: 5px;
+			margin-bottom: 50px;
+			margin-right: 500px;
+			margin-left: 500px;
+			background-color: white;
+			float: left;
+			width: 33.33%;
+			padding: 50px;
+		}
+		.button{
+			background-color: dodgerblue; 
+			border: 1px;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		.button {border-radius: 4px;}
+
+
+		.box2 {border-style: solid;
+
+			border-radius: 8px;
+			border: 1px solid black;
+			margin-top: 100px;
+			margin-bottom: 100px;
+			margin-right: 500px;
+			margin-left: 500px;
+			background-color: white;
+			float: left;
+			width: 33.33%;
+			padding: 50px;
+		}
+
+		.box3 {border-style: solid;
+			border: 2px solid red;
+
+			border: 1px solid black;
+			margin-top: 100px;
+			margin-bottom: 100px;
+			margin-right: 500px;
+			margin-left: 500px;
+			background-color: white;
+			float: left;
+			width: 33.33%;
+			padding: 50px;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
