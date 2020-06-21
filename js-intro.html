@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>>
+	<div class="container">
+		<table class="table table-hover table-striped">
+			<tr>
+				<th>Description</th>
+				<th>Amount</th>
+			</tr>
+
+			<tr>
+				<td>Company</td>
+				<td>
+					<div id="">
+						<select  id="demosds7878" class="form-control" >
+							<option my value="">--  Select --</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+			<tr id="showhide" style="display: none;">
+				<td id="company-name">&nbsp;</td>
+				<td><input value="" type="number" name="" class="form-control input" onchange ="total()"></td>
+			</tr>
+			<tr>
+				<td>Sale</td>
+				<td >
+					<input id="numb" value="" type="number" name="" class="form-control input" onchange="myFunction()" onchange="total()">
+
+
+					<p ></p></td>
+				</tr>
+
+				<tr>
+					<td>Purchase</td>
+					<td><input id="numb" value="" type="number" name="" class="form-control input" onkeyup="total()"></td>
+				</tr>
+				<tr>
+					<td>Expense</td>
+					<td><input id="numb" value="" type="number" name="" class="form-control input" onkeyup="total()"></td>
+				</tr>
+				<tr>
+					<td>Discount</td>
+					<td><input id="numb" value="" type="number" name="" class="form-control" id="discount" onkeyup="total()"></td>
+				</tr>
+				<tr>
+					<th>Total:</th>
+					<td><input value="" readonly="" type="number" class="form-control" name="" id="total"></td>
+				</tr>
+			</table>
+			<div class="row">
+				<input id="getvalue" type="text" name="" class="form-control mb-2" placeholder="Company Name">
+				<button onclick="my_Function()" class="btn btn-primary mr-3">Add Company</button>
+				<button onclick="removeElenment()" class="btn btn-danger">Remove Company</button>
+			</div>
+			
+		</div>
+
+		<script type="text/javascript">
+			let length,i,ASIGN,index,asign,text,piece;
+			
+			
+			let  company_array = [];
+			
+
+			function my_Function() {
+				let text='' ;
+				let asign=document.getElementById("getvalue").value;
+				if(asign==="" ){
+					return 0;
+
+				}
+				company_array.push(asign);														company_array.sort();																						
+				length = company_array.length;
+
+				for(i=0; i < length; i++) {
+
+					text += "<option>" + company_array[i] + "</option>";
+					
+					console.log(company_array[i]);
+
+				}
+
+				document.getElementById("demosds7878").innerHTML = text;
+
+				document.getElementById("getvalue").value = '';
+
+				console.log(text);
+
+			}
+			function removeElenment(){
+								
+				let ASIGN=document.getElementById("getvalue").value ;
+				console.log(ASIGN);
+
+				let index = company_array.indexOf(ASIGN);
+				console.log(index);
+
+				let piece=company_array.splice(index,1);	
+
+				console.log(piece);
+				length = company_array.length;
+				for(i=0; i < length; i++) {
+
+					text += "<option>" + company_array[i] + "</option>";
+				}
+
+				document.getElementById("demosds7878").innerHTML=text;
+				}	
+
+
+				function show_hide(company){
+					if(company == '') {
+						document.getElementById('showhide').style.display = 'none';
+					} else {
+						document.getElementById('showhide').style.display = 'block';
+					}
+
+			// let x=document.getElementById('showhide').innerHtml= ;
+			// 	if ( x.style.display ==='none';) {
+			// 		display=class;
+
+			// 	}
+			// 	else{
+			// 		x.style.display ='none';
+			// 	}
+
+		}
+
+
+		function total() {
+
+			let tot = 0;
+			let dis= 0;
+			let x = document.getElementsByClassName("input");
+			let i;
+
+			for (i = 0; i < x.length; i++) {
+				tot += parse(x[i].value);
+			}
+
+			dis = parse(document.getElementById('discount').value);
+			if (tot > 0 && tot<=dis )
+
+			{
+				alert('value is greater than Total');
+
+				return;
+			}
+
+			document.getElementById('total').value = tot - dis;
+
+				//tot = 0;
+			}
+
+			function parse(val) {
+				let v = parseFloat(val);
+
+				return isNaN(v) ? 0 : v;
+			}
+
+			function myFunction() {
+				let x, text;
+
+
+				x = document.getElementById("numb").value;
+
+
+				if (isNaN(x) || x < 1 || x > 10) {
+					text = "Input not valid";
+				} else {
+					text = "Input OK";
+				}
+				document.getElementById("demo").innerHTML ='<div class="alert alert-danger">no out of range</div>';;
+			}
+
+
+		</script>
+	</body>
+	</html>

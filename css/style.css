@@ -1,0 +1,56 @@
+.bg-purple
+{
+	background-color: #050d18;
+	
+	 
+	  position: fixed;
+}
+body{
+	position: relative;
+}
+
+.image{
+	width: 100px; height :100px;
+	margin: 15px auto;
+	border: 8px solid #2c2f3f;
+
+}
+ li { list-style-type: none; }
+ ul{
+ 	padding: 3;
+ 	padding-top: 30px;
+ }
+ h1.title-name{
+ 	font-size: 24px;
+ 
+ 	font-weight: 600;
+ 	    text-align-last: center;
+ 	  
+
+ }
+ .text-center{
+ 	text-align: center!important;
+ }
+ .pic{
+ 	background-size: contain;
+ 	background: url('../images/1.jpg') top center no-repeat;
+ 	height: 500px;
+ 	  background-size:100% 100%;
+ 	      background-attachment: fixed;
+ }
+ .resume-item{
+ 	border-left: 2px solid #1f5297;
+
+    padding:   20px;
+        position: relative
+
+ }
+ h2
+ {
+ 	color: #173b6c;
+ }
+ h1{
+ 	    
+ 	    text-align: center;
+ 	    text-orientation: center:;
+ }
