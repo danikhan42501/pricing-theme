@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Responsive Performant Background Slideshow Example</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: 'Roboto Condensed';
+            font-size: 120%;
+            padding: 40px 40px;
+        }
+        h1 {
+            margin: 0 auto 50px auto;
+        }
+        a {
+            color: #009999;
+        }
+        .layer {
+            background-color: rgba(255,255,255,0.3);
+            padding: 40px;
+            box-shadow: 0 0 20px 10px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
+            transform-style: flat;
+        }
+    </style>
+</head>
+<body>
+<div class="layer">
+    <h1>
+        Responsive Performant Background Slideshow Example
+    </h1>
+    <div id="carbon-block"></div>
+<div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="./src/jquery-background-slideshow.js"></script>
+<script>
+    $(document).ready(function () {
+
+/*
+        $(".layer").backgroundSlideshow({
+            delay: 3000,
+            transitionDuration: 3000,
+            images: [
+                "assets/images/image3.jpeg",
+                "assets/images/image4.jpeg"
+            ]
+        })
+*/
+        $("body").backgroundSlideshow({
+            onBeforeTransition: function (index) {
+                console.log("before transition", index)
+            },
+            onAfterTransition: function (index) {
+                console.log("after transition", index)
+            },
+            transitionDuration: 3000,
+            fixed: true,
+            images: [
+                "https://source.unsplash.com/H6wTktsFxik/2000x1500",
+                "https://source.unsplash.com/Sa1z1pEzjPI/2000x1500",
+                "https://source.unsplash.com/7fcSXSU-zhY/2000x1500",
+                "https://source.unsplash.com/hImXj2ifU-I/2000x1500"
+            ]
+        })
+
+
+
+
+    })
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
